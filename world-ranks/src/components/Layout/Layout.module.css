@@ -22,13 +22,29 @@
     font-size: 0.75rem;
 }
 
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .headerLink {
-    display: inline-block;
+    display: flex;
     cursor: pointer;
 }
 
-@media (max-width: 720px) {
-    .header {
-        text-align: center;
-    }
+.themeSwitcher {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    color: var(--text-secondary);
+    margin-left: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.themeSwitcher:focus {
+    outline: none;
 }
