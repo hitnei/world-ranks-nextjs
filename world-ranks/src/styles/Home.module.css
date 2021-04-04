@@ -2,3 +2,23 @@
     margin: 12px 0;
     color: var(--text-secondary);
 }
+
+.inputContainer {
+    margin: 0;
+    width: 100%;
+}
+
+@media screen and (min-width: 720px) {
+    .inputContainer {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin: 20px 0;
+    }
+    .counts {
+        flex: 2;
+    }
+    .input {
+        flex: 4;
+    }
+}

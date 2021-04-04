@@ -58,6 +58,7 @@ const CountriesTable = ({ countries }) => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.heading}>
+        <div className={styles.heading_flag}></div>
         <button
           className={styles.heading_name}
           onClick={() => {
@@ -76,14 +77,37 @@ const CountriesTable = ({ countries }) => {
           <div>Population</div>
           {value === "population" && <SortArrow direction={direction} />}
         </button>
+        <button
+          className={styles.heading_area}
+          onClick={() => {
+            setValueAndDirection("area");
+          }}
+        >
+          <div>Area (km<sup style={{fontSize: "0.5rem"}}>2</sup>)</div>
+          {value === "area" && <SortArrow direction={direction} />}
+        </button>
+        <button
+          className={styles.heading_gini}
+          onClick={() => {
+            setValueAndDirection("gini");
+          }}
+        >
+          <div>Gini</div>
+          {value === "gini" && <SortArrow direction={direction} />}
+        </button>
       </div>
       <div className={styles.listCountry}>
         {orderByCountries.map((country, index) => {
           return (
             <Link key={index} href={`/country/${country.alpha3Code}`}>
               <div className={styles.row}>
+                <div className={styles.flag}>
+                  <img src={country.flag} alt={country.name}></img>
+                </div>
                 <div className={styles.name}>{country.name}</div>
                 <div className={styles.population}>{country.population}</div>
+                <div className={styles.area}>{country.area || 0}</div>
+                <div className={styles.gini}>{country.gini || 0} %</div>
               </div>
             </Link>
           );

@@ -5,7 +5,6 @@
     border-radius: 8px;
     padding-left: 16px;
     color: var(--text-color-secondary);
-    width: 100%;
 }
 
 .input {
@@ -13,8 +12,8 @@
     background-color: transparent;
     padding: 16px;
     height: 100%;
-    width: 100%;
     outline: none;
+    width: 100%;
 }
 
 .input::placeholder {
