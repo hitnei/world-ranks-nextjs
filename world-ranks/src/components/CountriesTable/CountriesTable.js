@@ -56,7 +56,7 @@ const CountriesTable = ({ countries }) => {
   };
 
   return (
-    <div>
+    <div className={styles.wrapper}>
       <div className={styles.heading}>
         <button
           className={styles.heading_name}
@@ -77,16 +77,18 @@ const CountriesTable = ({ countries }) => {
           {value === "population" && <SortArrow direction={direction} />}
         </button>
       </div>
-      {orderByCountries.map((country, index) => {
-        return (
-          <Link key={index} href={`/country/${country.alpha3Code}`}>
-            <div className={styles.row}>
-              <div className={styles.name}>{country.name}</div>
-              <div className={styles.population}>{country.population}</div>
-            </div>
-          </Link>
-        );
-      })}
+      <div className={styles.listCountry}>
+        {orderByCountries.map((country, index) => {
+          return (
+            <Link key={index} href={`/country/${country.alpha3Code}`}>
+              <div className={styles.row}>
+                <div className={styles.name}>{country.name}</div>
+                <div className={styles.population}>{country.population}</div>
+              </div>
+            </Link>
+          );
+        })}
+      </div>
     </div>
   );
 };

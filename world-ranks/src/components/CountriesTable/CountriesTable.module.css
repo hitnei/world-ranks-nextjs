@@ -9,8 +9,7 @@
     cursor: pointer;
 }
 
-.heading_name,
-.heading_population {
+.heading_name, .heading_population {
     flex: 1;
     padding: 20px;
     color: var(--text-secondary);
@@ -37,7 +36,7 @@
     padding: 20px;
     text-align: center;
     background-color: var(--background-color-light);
-    border-radius:8px;
+    border-radius: 8px;
     margin-bottom: 16px;
     box-shadow: var(--box-shadow);
     font-weight: 500;
@@ -47,7 +46,16 @@
 
 .row:hover {
     transform: translateY(-4px);
-    box-shadow:  0px 4px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper {
+    width: 100%;
+}
+
+.listCountry {
+    max-height: calc(100vh - 320px);
+    overflow-y: auto;
 }
 
 .name {
